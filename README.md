@@ -18,7 +18,7 @@ https://www.postgresql.org/download/
 ```
 3. Clone the repository in your system
 ```
-git clone "https://github.com/salonigupta1/Social-Media-Application.git"
+git clone "https://github.com/salonigupta1/Social-Hunt.git"
 ```
 4. Open Command Prompt (if you are using Windows) or terminal in general
 5. Go to the directory.
