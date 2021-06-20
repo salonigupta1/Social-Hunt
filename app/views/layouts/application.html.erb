@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render partial: "layouts/header" %>
+
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-sm-12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  
+
+    <%= render partial: "layouts/footer" %>
+
+
+  </body>
+</html>
