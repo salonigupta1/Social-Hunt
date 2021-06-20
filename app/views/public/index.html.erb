@@ -10,7 +10,7 @@
                 <div class = "card p-3 mt-3 text-white bg-dark" >
                     <h4 style="color: white"><%= link_to post.title, community_post_path(post.community_id, post), style: "color: white"%></h4>
                     <p><%= truncate post.body, length: 200 %></p>
-                    <%= link_to "Like", new_account_session_path, class: "btn btn-light mt-2", style: "width: 5rem;" %>
+                    <%= link_to "Like", new_account_session_path, class: "btn btn-outline-light mt-2", style: "width: 5rem;" %>
                     <%= link_to "Comment", new_account_session_path, class: "btn btn-light mt-2", style: "width: 7rem;" %>
                 </div>
             <% end %>        

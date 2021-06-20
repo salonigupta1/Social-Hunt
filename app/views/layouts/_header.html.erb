@@ -1,5 +1,5 @@
-<div class="navbar navbar-expand-lg navbar-light bg-dark pt-2">
-    <p class = "navbar-brand"> <%= link_to "Blog App", root_path, style: "color: white"%> </p>
+<div class="navbar navbar-expand-lg navbar-light bg-dark">
+    <%= link_to "Blog App", root_path, style: "color: white", class: "navbar-brand"%>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,7 +10,7 @@
                     <%= link_to "Log Out", destroy_account_session_path, method: :delete, class: "btn btn-outline-light" %>
                 <% else %>
                     <%= link_to "Log In", new_account_session_path, class: "btn btn-outline-light" %>
-                    <%= link_to "Sign In", new_account_registration_path, class: "btn btn-light" %>
+                    <%= link_to "Sign Up", new_account_registration_path, class: "btn btn-light" %>
                 <% end %>
             </div>
             
