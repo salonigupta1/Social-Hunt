@@ -12,17 +12,25 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 https://rubyinstaller.org/
 ```
-2. Clone the repository in your system
+2. Install postgreSql 
+```
+https://www.postgresql.org/download/
+```
+3. Clone the repository in your system
 ```
 git clone "https://github.com/salonigupta1/Social-Media-Application.git"
 ```
-3. Open Command Prompt (if you are using Windows) or terminal in general
-4. Go to the directory.
-5. Type the following command to run the application
+4. Open Command Prompt (if you are using Windows) or terminal in general
+5. Go to the directory.
+6. Change postgreSql credentials in database.yml
+7. Type the following command to run the application
+```
+rails db:migrate
+```
 ```
 rails s
 ```
-6. Follow the instructions, you are good to go 
+7. Follow the instructions, you are good to go 
 
 
 Give a star, if you like the repo.
