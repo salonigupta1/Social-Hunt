@@ -1,30 +1,30 @@
 <div class = "container" >
-    <div class = "row mt-4">
-        <div class = "col">
+    <div class = "row mt-2">
+        <div class = "col-12">
             <h2>Popular Posts</h2>
         </div>
     </div>
     <div class = "row">
-        <div class = "col-8">
+        <div class = "col-9">
             <% @posts.each do |post| %>
-                <div class = "card p-3">
-                    <h4><%= link_to post.title, community_post_path(post.community_id, post) %></h4>
+                <div class = "card p-3 mt-3 text-white bg-dark" >
+                    <h4 style="color: white"><%= link_to post.title, community_post_path(post.community_id, post), style: "color: white"%></h4>
                     <p><%= truncate post.body, length: 200 %></p>
-                    <p class: "btn btn-primary mt-4">Like</p>
-                    <p class: "btn btn-primary mt-4">Comment</p>
+                    <%= link_to "Like", new_account_session_path, class: "btn btn-light mt-2", style: "width: 5rem;" %>
+                    <%= link_to "Comment", new_account_session_path, class: "btn btn-light mt-2", style: "width: 7rem;" %>
                 </div>
             <% end %>        
         </div>
-        <div class = "col-4">
+        <div class = "col-3">
             <p class = "h5">Communities</p>
             <div class = "card p-2">
                 <ul class = "list-group list-group-flush">
                 <% @communities.each do |community| %>
-                    <li class = "list-group-item"><%= link_to community.name, community_path(community) %></li>
+                    <li class = "list-group-item"><%= link_to community.name, community_path(community), style: "color: black" %></li>
                 <% end %>
                 </ul>
             </div>
-            <%= link_to "View all",  communities_path, class: "btn btn-primary mt-4" %>
+            <%= link_to "View all",  communities_path, class: "btn btn-dark mt-4" %>
         </div>
     </div>
 </div>

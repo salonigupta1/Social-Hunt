@@ -6,8 +6,8 @@
 
 <% if @communities.size > 0 %>
     <% @communities.each do |community| %>
-        <div class = "card p-3 mt-3" style="width: 50rem;">
-            <h3><%= link_to community.name, community %></h3>
+        <div class = "card p-3 mt-3 text-white bg-dark" style="width: 80rem;">
+            <h3><%= link_to community.name, community, style: "color: white" %></h3>
             <%= simple_format community.rules %>
         </div>
     <% end %>
