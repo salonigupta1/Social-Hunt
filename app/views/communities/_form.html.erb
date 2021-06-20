@@ -1,20 +1,23 @@
-<div class ="row">
-    <div class = "col-sm-8">
-        <%= form_for @community do |form| %>
-            <div class = "form-group">
-                <%= label_tag :name %>
-                <%= form.text_field :name, class: "form-control" %>
-            </div>
-            <div class = "form-group">
-                <%= label_tag :url %>
-                <%= form.text_field :url, class: "form-control" %>
-            </div>
-            <div class = "form-group">
-                <%= label_tag :rules %>
-                <%= form.text_field :rules, class: "form-control" %>
-            </div>
+<div class = "card p-5" style =  "box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+border-radius: 20px;">
+    <div class ="row">
+        <div class = "col">
+            <%= form_for @community do |form| %>
+                <div class = "form-group">
+                    <%= label_tag :name %>
+                    <%= form.text_field :name, class: "form-control" %>
+                </div>
+                <div class = "form-group">
+                    <%= label_tag :url %>
+                    <%= form.text_field :url, class: "form-control" %>
+                </div>
+                <div class = "form-group">
+                    <%= label_tag :rules %>
+                    <%= form.text_field :rules, class: "form-control" %>
+                </div>
 
-            <%= form.submit "Submit", class: "btn btn-primary" %>
-        <% end %>
+                <%= form.submit "Submit", class: "btn btn-primary" %>
+            <% end %>
+        </div>
     </div>
 </div>

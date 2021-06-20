@@ -1,15 +1,19 @@
 <div>
   <div class = "col d-flex justify-content-center m-5">
-    <div class = "card p-2">
+    <div class = "card p-4" style = "width: 500px;
+    min-height: 350px;
+    background: #fff;
+    box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+    border-radius: 20px;">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field mt-2">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", style: "width: 20rem" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", style: "width: 25rem" %>
       </div>
 
       <div class="field mt-2">
         <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "current-password", style: "width: 20rem" %>
+        <%= f.password_field :password, autocomplete: "current-password", style: "width: 25rem" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
@@ -18,11 +22,12 @@
           <%= f.label :remember_me %>
         </div>
       <% end %>
-
-      <div class="actions mt-2">
-        <%= f.submit "Log in"%>
+      <div>
+        <div class="actions mt-5">
+          <%= f.submit "Log in"%>
+        </div>
+        <%= render "devise/shared/links" %>
       </div>
-      <%= render "devise/shared/links" %>
     <% end %>
     </div>
   </div>

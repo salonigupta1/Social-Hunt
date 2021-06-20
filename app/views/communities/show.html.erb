@@ -1,12 +1,12 @@
 <div>
-<%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-dark float-end mt-5", style: "width: 10rem" %>
+<%= link_to "Create New Post", new_community_post_path(@community), class: "btn btn-light float-end", style: "width: 10rem; background-color: #E3F2FD; color: #4682B4; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);" %>
 <div class = "p-3">
     <h4><%= @community.name %></h4>
 </div>
 
 <% @posts.each do |post| %>
-    <div class = "card p-3 mt-2 text-white bg-dark" style="width: 60rem;">
-        <h4><%= link_to post.title, community_post_path(@community, post), style: "color: white" %></h4>
+    <div class = "card p-3 mt-3" style="width: 50rem; background-color: #E3F2FD; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);">
+        <h4><%= link_to post.title, community_post_path(@community, post), style: "color: #4682B4" %></h4>
         <p><%= truncate post.body, length: 200 %></p>
      </div>
 <% end %>

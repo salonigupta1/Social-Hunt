@@ -1,32 +1,32 @@
-<div class = "container" >
-    <div class = "row mt-2">
+<div class = "container" style = "margin-left: none; margin-right: none;">
+    <div class = "row">
         <div class = "col-12">
-            <h2>Popular Posts</h2>
+            <h2 style = "color: #4682B4; font-family: Montserrat">Popular Posts</h2>
         </div>
     </div>
     <div class = "row">
         <div class = "col-9">
             <% @posts.each do |post| %>
-                <div class = "card p-3 mt-3 text-white bg-dark" >
-                    <h4 style="color: white"><%= link_to post.title, community_post_path(post.community_id, post), style: "color: white"%></h4>
-                    <p><%= truncate post.body, length: 200 %></p>
+                <div class = "card p-3 mt-3" style="background-color: #e3f2fd; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);" >
+                    <h4 style="color: white"><%= link_to post.title, community_post_path(post.community_id, post), style: "color: #4682B4; font-family: Montserrat"%></h4>
+                    <p><%= truncate post.body, length: 200%></p>
                     <div class = "col">
-                    <%= link_to "Like", new_account_session_path, class: "btn btn-outline-light mt-2", style: "width: 5rem;" %>
-                    <%= link_to "Comment", new_account_session_path, class: "btn btn-outline-light mt-2", style: "width: 7rem;" %>
+                    <%= link_to "Like", new_account_session_path, class: "btn btn-outline-light mt-2", style: "width: 5rem; background-color: #4682B4; border-radius: 10px; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);" %>
+                    <%= link_to "Comment", new_account_session_path, class: "btn btn-outline-light mt-2", style: "width: 7rem; background-color: #4682B4; border-radius: 10px; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);" %>
                     </div>
                 </div>
             <% end %>        
         </div>
         <div class = "col-3">
-            <p class = "h5">Communities</p>
+            <p class = "h5" style = "color: #4682B4; font-family: Montserrat">Communities</p>
             <div class = "card p-2">
                 <ul class = "list-group list-group-flush">
                 <% @communities.each do |community| %>
-                    <li class = "list-group-item"><%= link_to community.name, community_path(community), style: "color: black" %></li>
+                    <li class = "list-group-item"><%= link_to community.name, community_path(community), style: "color: #4682B4" %></li>
                 <% end %>
                 </ul>
             </div>
-            <%= link_to "View all",  communities_path, class: "btn btn-dark mt-4" %>
+            <%= link_to "View all",  communities_path, class: "btn btn-light mt-4", style: "background-color: #4682B4; border-radius: 8px; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);" %>
         </div>
     </div>
 </div>
